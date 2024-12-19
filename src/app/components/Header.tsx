@@ -50,7 +50,7 @@ export default function Header() {
 
   return (
     <header className={`${headerClass} px-6 md:px-8 h-16 md:h-20`}> 
-      <div className="container mx-auto py-4 flex justify-between items-center">
+      <div className="container mx-auto py-4 px-0 flex justify-between items-center">
         <Link href="/" className="flex items-center gap-2 md:gap-4 overflow-hidden">
           <Image 
             src="/placeholder.svg?height=50&width=50"

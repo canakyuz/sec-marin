@@ -81,7 +81,7 @@ export default function ProductPage({ params }: PageProps) {
 
   return (
       <DecorativeLayout>
-        <div className="container mx-auto px-4 py-6 relative">
+        <div className="container mx-auto px-5 py-6 relative">
           <Link
               href="/products"
               className="inline-flex items-center text-blue-600 hover:text-blue-700 text-sm md:text-base"
