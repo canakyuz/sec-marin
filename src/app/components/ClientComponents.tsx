@@ -5,6 +5,7 @@ import { Card } from "@/components/ui/card";
 import Image from 'next/image';
 import ProductTabs from '../../components/ProdcutTabs';
 import type { Product } from '@/types/product';
+import { ReactElement, ReactNode, ReactPortal, Key } from 'react';
 
 type RecipeDisplayProps = {
     recipes: any[];
@@ -33,7 +34,7 @@ export function RecipeDisplay({recipes}: RecipeDisplayProps) {
                                     Malzemeler
                                 </h4>
                                 <ul className="list-disc list-inside text-gray-600 space-y-1 text-xs md:text-sm">
-                                    {recipe.ingredients.map((ingredient, idx) => (
+                                    {recipe.ingredients.map((ingredient: string | number | bigint | boolean | ReactElement | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement | Iterable<ReactNode> | null | undefined> | null | undefined, idx: Key | null | undefined) => (
                                         <li key={idx}>{ingredient}</li>
                                     ))}
                                 </ul>
@@ -44,7 +45,7 @@ export function RecipeDisplay({recipes}: RecipeDisplayProps) {
                                     Hazırlanışı
                                 </h4>
                                 <ol className="list-decimal list-inside text-gray-600 space-y-1 text-xs md:text-sm">
-                                    {recipe.instructions.map((instruction, idx) => (
+                                    {recipe.instructions.map((instruction: string | number | bigint | boolean | ReactElement | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement | Iterable<ReactNode> | null | undefined> | null | undefined, idx: Key | null | undefined) => (
                                         <li key={idx}>{instruction}</li>
                                     ))}
                                 </ol>
