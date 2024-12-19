@@ -20,6 +20,7 @@ export default function Header() {
     products: "Products",
     about: "About",
   };
+
   const { language } = useLanguage()
 
   const isHomePage = pathname === '/' || pathname === '/en'
