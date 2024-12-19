@@ -1,0 +1,309 @@
+{
+  "tr": {
+    "common": {
+      "siteName": "Sec Marin Gıda A.Ş.",
+      "navigation": {
+        "home": "Ana Sayfa",
+        "products": "Ürünlerimiz",
+        "about": "Hakkımızda"
+      },
+      "footer": {
+        "address": "Adres: Egemenlik Mh. 6153 Sk. Erim-1 Sitesi No:3/C Bornova / İzmir - TÜRKİYE",
+        "phone": "Telefon: +90 232 502 1000",
+        "email": "E-posta: info@secmarin.com",
+        "rights": "Tüm hakları saklıdır.",
+        "quickLinks": "Hızlı Bağlantılar",
+        "contact": "İletişim",
+        "designedBy": "Can Akyuz"
+      },
+      "cta": {
+        "discoverProducts": "Ürünlerimizi Keşfedin",
+        "learnMore": "Daha Fazla Bilgi",
+        "contactUs": "İletişime Geç",
+        "sendMessage": "Mesaj Gönder"
+      },
+      "loading": "Yükleniyor...",
+      "error": "İçerik yüklenirken bir hata oluştu"
+    },
+    "home": {
+      "hero": {
+        "title": "Denizin Lezzeti, Geleneğin Gücü",
+        "description": "İzmir'in kalbinde, geleneksel yöntemlerle hazırlanan eşsiz deniz ürünleri",
+        "cta": {
+          "products": "Ürünlerimizi Keşfedin",
+          "about": "Hakkımızda"
+        }
+      },
+      "featuredProducts": {
+        "title": "Öne Çıkan Ürünlerimiz",
+        "description": "Geleneksel yöntemlerle hazırlanan, özenle seçilmiş deniz ürünlerimizi keşfedin"
+      },
+      "about": {
+        "title": "Biz Kimiz?",
+        "description": [
+          "Sec Marin Gıda A.Ş. olarak, İzmir'de yer alan tesisimizde geleneksel yöntemlere %100 bağlı kalarak, butik üretimi endüstriyele entegre ediyoruz.",
+          "Geleneksel yapımızla, değişen tüketici beklentilerini sezinleyip retroya dönüşte adeta Türkiye'de daha önce hiç yapılmamış butik endüstriyel füme ürün yelpazesine ulaştık."
+        ],
+        "image": "/images/sec-marin-facility.jpg"
+      },
+      "qualityAssurance": {
+        "title": "Kalite Güvencemiz",
+        "items": [
+          {
+            "title": "Hijyen Standartları",
+            "description": "HACCP gıda mevzuatına uygun üretim süreçleri."
+          },
+          {
+            "title": "Geleneksel Yöntemler",
+            "description": "Eski usul füme fırınlarında meşe ve özel karışım ağaçların odunları/talaşları ile tütsüleme."
+          },
+          {
+            "title": "Taze Ürünler",
+            "description": "Soğuk zincir korumasıyla depolama ve sevkiyat."
+          }
+        ]
+      }
+    },
+    "about": {
+      "title": "Hakkımızda",
+      "description": "Geleneksel değerler ve modern üretim teknikleriyle, denizin en kaliteli ürünlerini sizlere sunuyoruz.",
+      "whoWeAre": {
+        "title": "Biz Kimiz?",
+        "content": [
+          "Sec Marin Gıda A.Ş. olarak, İzmir'de yer alan tesisimizde geleneksel yöntemlere %100 bağlı kalarak, butik üretimi endüstriyele entegre ediyoruz.",
+          "Füme ve ileri işleme tekniklerinde uzmanlaşmış kadromuzla, en kaliteli deniz ürünlerini sizlere sunuyoruz.",
+          "Geleneksel yapımızla, değişen tüketici beklentilerini sezinleyip retroya dönüşte adeta Türkiye'de daha önce hiç yapılmamış butik endüstriyel füme ürün yelpazesine ulaştık."
+        ]
+      },
+      "mission": {
+        "title": "Misyonumuz",
+        "content": "Üretim yaptığımız her alanda, ürün kalitesinden ödün vermeyen bir firma olarak, müşterilerimizin beklentilerini en üst düzeyde karşılamayı hedefliyoruz. Kalite, bizim için sadece bir vaat değil, günlük operasyonlarımızın merkezinde yer alan bir önceliktir."
+      },
+      "vision": {
+        "title": "Vizyonumuz",
+        "content": "Odaklandığımız işlerde, yurt içi ve yurtdışı pazarlarda hayatı kolaylaştıran ve dünyayı değiştiren yaratıcı ürünler ile tercih edilen bir firma olmayı hedefliyoruz. Yenilikçi yaklaşımımız sayesinde, müşterilerimize benzersiz ve katma değerli ürünler sunmaktayız."
+      },
+      "values": {
+        "title": "Değerlerimiz",
+        "items": [
+          {
+            "title": "Müşteri Odaklılık",
+            "description": "Müşterilerimiz bizim iş ortağımızdır. Onlara kaliteyi ve güveni sürdürülebilir kılmak en önemli önceliğimizdir."
+          },
+          {
+            "title": "Çalışan Değeri",
+            "description": "Evrensel değerleri benimsemiş, takım ruhuna sahip, aidiyeti yüksek, çevik ve yetkin çalışanlarız."
+          },
+          {
+            "title": "Yenilikçilik",
+            "description": "Analitik ve sistematik bir bakış açısı ile ar-geye önem veriyoruz. İleri teknolojiyi kullanarak sınırlarımızı zorluyoruz."
+          }
+        ]
+      },
+      "productionProcess": {
+        "title": "Üretim Sürecimiz",
+        "description": "Sec Marin'in üretim süreçleri yüksek hijyen ve kalite standartlarına uygun olarak yürütülmektedir.",
+        "steps": [
+          {
+            "title": "Hammadde Seçimi",
+            "description": "Ürünlerimiz, ilk olarak özenle temizlenmekte ve boyutlarına göre sınıflandırılmaktadır."
+          },
+          {
+            "title": "İşleme",
+            "description": "Sınıflandırılan ürünler; salamura, marinat, fümeleme işlemlerinden geçmektedir."
+          },
+          {
+            "title": "Paketleme ve Depolama",
+            "description": "Ürünlerimiz hassas tartım ve paketleme işlemlerinden geçirilmektedir. Ürünlerin kalitesi ve tazeliği korunarak, soğuk zincir korumasıyla depolanmakta ve müşterilerimize ulaştırılmaktadır."
+          }
+        ]
+      }
+    },
+    "products": {
+      "title": "Ürünlerimiz",
+      "description": "Geleneksel yöntemlerle hazırlanan füme ve marine ürünlerimizi keşfedin.",
+      "categories": {
+        "all": "Tüm Ürünler",
+        "fume": "Füme Ürünler",
+        "marine": "Marine Ürünler"
+      },
+      "details": {
+        "backToProducts": "Tüm Ürünlere Dön",
+        "category": {
+          "fume": "Füme Ürünler",
+          "marine": "Marine Ürünler"
+        },
+        "tabs": {
+          "details": "Ürün Detayı",
+          "nutrition": "Besin Değerleri",
+          "serving": "Servis Önerileri"
+        },
+        "nutritionInfo": {
+          "protein": "Protein",
+          "fat": "Yağ",
+          "carbs": "Karbonhidrat",
+          "calories": "Kalori"
+        },
+        "recipes": {
+          "title": "Tarifler",
+          "ingredients": "Malzemeler",
+          "instructions": "Hazırlanışı"
+        }
+      }
+    }
+  },
+  "en": {
+    "common": {
+      "siteName": "Sec Marin Food Inc.",
+      "navigation": {
+        "home": "Home",
+        "products": "Our Products",
+        "about": "About Us"
+      },
+      "footer": {
+        "address": "Address: Egemenlik District, 6153 St. Erim-1 Site No:3/C Bornova / Izmir - TURKEY",
+        "phone": "Phone: +90 232 502 1000",
+        "email": "Email: info@secmarin.com",
+        "rights": "All rights reserved.",
+        "quickLinks": "Quick Links",
+        "contact": "Contact",
+        "designedBy": "Can Akyuz"
+      },
+      "cta": {
+        "discoverProducts": "Discover Our Products",
+        "learnMore": "Learn More",
+        "contactUs": "Contact Us",
+        "sendMessage": "Send Message"
+      },
+      "loading": "Loading...",
+      "error": "Error loading content"
+    },
+    "home": {
+      "hero": {
+        "title": "Taste of the Sea, Power of Tradition",
+        "description": "Unique seafood prepared with traditional methods in the heart of Izmir",
+        "cta": {
+          "products": "Discover Our Products",
+          "about": "About Us"
+        }
+      },
+      "featuredProducts": {
+        "title": "Our Featured Products",
+        "description": "Discover our carefully selected seafood products prepared with traditional methods"
+      },
+      "about": {
+        "title": "Who We Are",
+        "description": [
+          "As Sec Marin Food Inc., we integrate boutique production with industry in our facility located in Izmir, adhering 100% to traditional methods.",
+          "With our traditional structure, we have reached a boutique industrial smoked product range that has never been done before in Turkey, sensing changing consumer expectations and returning to retro."
+        ],
+        "image": "/images/sec-marin-facility.jpg"
+      },
+      "qualityAssurance": {
+        "title": "Our Quality Assurance",
+        "items": [
+          {
+            "title": "Hygiene Standards",
+            "description": "Production processes in compliance with HACCP food regulations."
+          },
+          {
+            "title": "Traditional Methods",
+            "description": "Smoking with oak and special mixed tree woods/sawdust in old-style smoking ovens."
+          },
+          {
+            "title": "Fresh Products",
+            "description": "Storage and shipping with cold chain protection."
+          }
+        ]
+      }
+    },
+    "about": {
+      "title": "About Us",
+      "description": "We offer you the highest quality seafood products with traditional values and modern production techniques.",
+      "whoWeAre": {
+        "title": "Who We Are?",
+        "content": [
+          "As Sec Marin Food Inc., we integrate boutique production with industry in our facility located in Izmir, adhering 100% to traditional methods.",
+          "With our team specialized in smoking and advanced processing techniques, we offer you the highest quality seafood products.",
+          "With our traditional structure, we have reached a boutique industrial smoked product range that has never been done before in Turkey, sensing changing consumer expectations and returning to retro."
+        ]
+      },
+      "mission": {
+        "title": "Our Mission",
+        "content": "As a company that does not compromise on product quality in every area we produce, we aim to meet our customers' expectations at the highest level. Quality is not just a promise for us, it is a priority at the center of our daily operations."
+      },
+      "vision": {
+        "title": "Our Vision",
+        "content": "We aim to be a preferred company with creative products that make life easier and change the world in domestic and international markets in the businesses we focus on. Thanks to our innovative approach, we offer our customers unique and value-added products."
+      },
+      "values": {
+        "title": "Our Values",
+        "items": [
+          {
+            "title": "Customer Focus",
+            "description": "Our customers are our business partners. Making quality and trust sustainable for them is our top priority."
+          },
+          {
+            "title": "Employee Value",
+            "description": "We are agile and competent employees with a team spirit, high sense of belonging, and who have adopted universal values."
+          },
+          {
+            "title": "Innovation",
+            "description": "We place importance on R&D with an analytical and systematic perspective. We push our limits using advanced technology."
+          }
+        ]
+      },
+      "productionProcess": {
+        "title": "Our Production Process",
+        "description": "Sec Marin's production processes are carried out in accordance with high hygiene and quality standards.",
+        "steps": [
+          {
+            "title": "Raw Material Selection",
+            "description": "Our products are first carefully cleaned and classified according to their size."
+          },
+          {
+            "title": "Processing",
+            "description": "Classified products go through brine, marinade, and smoking processes."
+          },
+          {
+            "title": "Packaging and Storage",
+            "description": "Our products undergo precise weighing and packaging processes. The quality and freshness of the products are preserved and stored with cold chain protection and delivered to our customers."
+          }
+        ]
+      }
+    },
+    "products": {
+      "title": "Our Products",
+      "description": "Discover our smoked and marinated products prepared with traditional methods.",
+      "categories": {
+        "all": "All Products",
+        "fume": "Smoked Products",
+        "marine": "Marinated Products"
+      },
+      "details": {
+        "backToProducts": "Back to All Products",
+        "category": {
+          "fume": "Smoked Products",
+          "marine": "Marinated Products"
+        },
+        "tabs": {
+          "details": "Product Details",
+          "nutrition": "Nutritional Information",
+          "serving": "Serving Suggestions"
+        },
+        "nutritionInfo": {
+          "protein": "Protein",
+          "fat": "Fat",
+          "carbs": "Carbohydrates",
+          "calories": "Calories"
+        },
+        "recipes": {
+          "title": "Recipes",
+          "ingredients": "Ingredients",
+          "instructions": "Instructions"
+        }
+      }
+    }
+  }
+}
+
