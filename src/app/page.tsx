@@ -123,7 +123,7 @@ export default function HomePage() {
                   <h2 className="text-3xl md:text-4xl font-bold mb-6 text-slate-800">{content.home.about.title}</h2>
                   {content.home.about.description.map((paragraph: string | number | bigint | boolean | ReactElement | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement | Iterable<ReactNode> | null | undefined> | null | undefined, index: Key | null | undefined) => (
                       <p key={index} className="text-gray-600 mb-4 text-lg">{paragraph}</p>
-                  ))}æ
+                  ))}
                   <Link
                       href="/about"
                       className="inline-flex items-center bg-slate-800 text-white px-6 py-3 rounded-lg hover:bg-slate-700 transition-colors text-lg mt-4"
