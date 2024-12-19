@@ -96,7 +96,7 @@ export default function ProductTabs({ product, nutritionData, servingSuggestions
 
                 {activeTab === 'nutrition' && (
                     <div className="overflow-x-auto">
-                        <table className="w-full text-sm">
+                        <table className="w-full text-xs md:text-sm">
                             <thead>
                             <tr className="border-b">
                                 <th className="text-left py-2">Besin Değerleri</th>

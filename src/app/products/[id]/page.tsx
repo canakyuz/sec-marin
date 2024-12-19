@@ -1,9 +1,12 @@
+"use client";
+
 import { ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
 import { DecorativeLayout } from '@/app/components/DecorativeLayout';
 import { allProducts } from '@/data/products-data';
 import { ProductDetails, RecipeDisplay } from '../../components/ClientComponents';
+import type { Recipe } from '@/types/product';
 import { use } from 'react';
 
 type PageProps = {
@@ -18,6 +21,7 @@ export default function ProductPage({ params }: PageProps) {
   if (!product) {
     notFound();
   }
+
 
   const nutritionData = {
     per100g: {
@@ -99,7 +103,7 @@ export default function ProductPage({ params }: PageProps) {
           />
 
           <div className="mt-12 md:mt-16">
-            <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8">Tarifler</h2>
+            <h2 className="text-2xl md:text-3xl font-bold m-6 md:mb-6">{recipes.title}</h2>
             <RecipeDisplay recipes={recipes} />
           </div>
         </div>
