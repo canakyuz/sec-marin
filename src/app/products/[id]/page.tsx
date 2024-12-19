@@ -15,6 +15,7 @@ import { cn } from "@/lib/utils"
 export default function ProductPage({ params }: { params: { id: string } }) {
   const [activeTab, setActiveTab] = useState<'details' | 'nutrition'>('details')
   const product = allProducts.find(p => p.id === parseInt(params.id))
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const content = useContent()
 
   if (!product) {
