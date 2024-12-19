@@ -7,7 +7,7 @@ import ProductTabs from '../../components/ProdcutTabs';
 import type { Product } from '@/types/product';
 
 type RecipeDisplayProps = {
-    recipes: never[];
+    recipes: any[];
 }
 
 export function RecipeDisplay({ recipes }: RecipeDisplayProps) {
