@@ -91,7 +91,7 @@ export default function ProductPage({ params }: PageProps) {
           </Link>
         </div>
 
-        <div className="container mx-auto px-4 pb-12 md:pb-16 relative">
+        <div className="container mx-auto px-4 md:px-0 pb-12 md:pb-16 relative">
           <ProductDetails
               product={product}
               nutritionData={nutritionData}
