@@ -1,0 +1,10 @@
+{
+  "extends": "next",
+  "rules": {
+    // Tüm kuralları devre dışı bırakmak için
+    "react/no-unescaped-entities": "off",
+    "react/display-name": "off",
+    "@next/next/no-img-element": "off"
+    // Diğer kuralları da buraya ekleyebilirsiniz
+  }
+}
