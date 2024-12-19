@@ -38,8 +38,8 @@ export const CategoryFilter: React.FC<CategoryFilterProps> = ({ activeCategory, 
                   onClick={() => onCategoryChange(key)}
                   className={`flex items-center gap-2 px-4 py-2 ${
                       activeCategory === key
-                          ? 'bg-blue-600 text-white'
-                          : 'bg-white text-gray-800 hover:bg-gray-100'
+                          ? 'bg-blue-600 text-white hover:bg-blue-700 focus:ring-2 focus:ring-blue-500 focus:ring-offset-2'
+                          : 'bg-white text-gray-800 hover:bg-gray-100 hover:text-gray-900 focus:bg-gray-100 focus:text-gray-900 focus:ring-2 focus:ring-gray-300 focus:ring-offset-2'
                   }`}
               >
                 {categoryIcons[key as keyof typeof categoryIcons] && React.createElement(categoryIcons[key as keyof typeof categoryIcons], { className: "w-5 h-5" })}
@@ -52,4 +52,3 @@ export const CategoryFilter: React.FC<CategoryFilterProps> = ({ activeCategory, 
 }
 
 export default CategoryFilter
-
