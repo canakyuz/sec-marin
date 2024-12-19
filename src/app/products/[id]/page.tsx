@@ -4,9 +4,16 @@ import { notFound } from 'next/navigation';
 import { DecorativeLayout } from '@/app/components/DecorativeLayout';
 import { allProducts } from '@/data/products-data';
 import { ProductDetails, RecipeDisplay } from '../../components/ClientComponents';
+import { use } from 'react';
 
-export default function ProductPage({ params }: { params: { id: string } }) {
-  const product = allProducts.find(p => p.id === parseInt(params.id));
+type PageProps = {
+  params: Promise<{ id: string }> & { id: string };
+};
+
+export default function ProductPage({ params }: PageProps) {
+  // params'ı Promise olarak kullanıyoruz
+  const id = use(params).id;
+  const product = allProducts.find(p => p.id === parseInt(id));
 
   if (!product) {
     notFound();
