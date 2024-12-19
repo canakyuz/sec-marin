@@ -4,6 +4,7 @@ import { ArrowLeft, ChefHat, Utensils } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 import { notFound } from 'next/navigation'
+import React from 'react';
 import { Card } from "@/components/ui/card"
 import { allProducts } from '@/data/products-data'
 import { useContent } from '@/app/hooks/useContent'
@@ -11,13 +12,13 @@ import { DecorativeLayout } from '@/app/components/DecorativeLayout'
 import ProductTabs from '@/components/ProdcutTabs'
 
 export default function ProductPage({ params }: { params: { id: string } }) {
-  const product = allProducts.find(p => p.id === parseInt(params.id))
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const content = useContent()
-
+  const id = params.id;
+  const product = allProducts.find(p => p.id === parseInt(id));
   if (!product) {
     notFound()
   }
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  const content = useContent()
 
   const nutritionData = {
     per100g: {
@@ -168,3 +169,4 @@ export default function ProductPage({ params }: { params: { id: string } }) {
       </DecorativeLayout>
   )
 }
+

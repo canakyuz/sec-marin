@@ -8,8 +8,35 @@ import { Product } from '@/types/product'
 interface ProductTabsProps {
     product: Product
     nutritionData: {
-        per100g: any
-        perServing: any
+        per100g: {
+            energy: { kj: number; kcal: number };
+            fat: {
+                total: number;
+                saturated: number;
+                unsaturated: number;
+            };
+            carbs: {
+                total: number;
+                sugars: number;
+            };
+            protein: number;
+            salt: number;
+        };
+        perServing: {
+            size: number;
+            energy: { kj: number; kcal: number };
+            fat: {
+                total: number;
+                saturated: number;
+                unsaturated: number;
+            };
+            carbs: {
+                total: number;
+                sugars: number;
+            };
+            protein: number;
+            salt: number;
+        };
     }
     servingSuggestions: string[]
 }
@@ -40,8 +67,7 @@ export default function ProductTabs({ product, nutritionData, servingSuggestions
                                 'whitespace-nowrap py-3 md:py-4 px-1 border-b-2 font-medium text-xs md:text-sm'
                             )}
                         >
-                            {tab === 'details' && 'Ürün Detayı ve Servis Önerileri'}
-                            {tab === 'nutrition' && 'Besin Değerleri'}
+                            {tab === 'details' ? 'Ürün Detayı ve Servis Önerileri' : 'Besin Değerleri'}
                         </button>
                     ))}
                 </nav>
@@ -79,7 +105,41 @@ export default function ProductTabs({ product, nutritionData, servingSuggestions
                             </tr>
                             </thead>
                             <tbody className="divide-y divide-gray-200">
-                            {/* ... (rest of the table content remains the same) ... */}
+                            <tr>
+                                <td className="py-2">Enerji (kJ/kcal)</td>
+                                <td className="text-right">{nutritionData.per100g.energy.kj}/{nutritionData.per100g.energy.kcal}</td>
+                                <td className="text-right">{nutritionData.perServing.energy.kj}/{nutritionData.perServing.energy.kcal}</td>
+                            </tr>
+                            <tr>
+                                <td className="py-2">Yağ (g)</td>
+                                <td className="text-right">{nutritionData.per100g.fat.total}</td>
+                                <td className="text-right">{nutritionData.perServing.fat.total}</td>
+                            </tr>
+                            <tr>
+                                <td className="py-2 pl-4">- Doymuş Yağ (g)</td>
+                                <td className="text-right">{nutritionData.per100g.fat.saturated}</td>
+                                <td className="text-right">{nutritionData.perServing.fat.saturated}</td>
+                            </tr>
+                            <tr>
+                                <td className="py-2">Karbonhidrat (g)</td>
+                                <td className="text-right">{nutritionData.per100g.carbs.total}</td>
+                                <td className="text-right">{nutritionData.perServing.carbs.total}</td>
+                            </tr>
+                            <tr>
+                                <td className="py-2 pl-4">- Şekerler (g)</td>
+                                <td className="text-right">{nutritionData.per100g.carbs.sugars}</td>
+                                <td className="text-right">{nutritionData.perServing.carbs.sugars}</td>
+                            </tr>
+                            <tr>
+                                <td className="py-2">Protein (g)</td>
+                                <td className="text-right">{nutritionData.per100g.protein}</td>
+                                <td className="text-right">{nutritionData.perServing.protein}</td>
+                            </tr>
+                            <tr>
+                                <td className="py-2">Tuz (g)</td>
+                                <td className="text-right">{nutritionData.per100g.salt}</td>
+                                <td className="text-right">{nutritionData.perServing.salt}</td>
+                            </tr>
                             </tbody>
                         </table>
                     </div>
@@ -88,3 +148,4 @@ export default function ProductTabs({ product, nutritionData, servingSuggestions
         </div>
     )
 }
+
