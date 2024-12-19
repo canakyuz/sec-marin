@@ -11,7 +11,7 @@ export type Product = {
   category: 'füme' | 'marine';
   subcategory?: 'ahtapot' | 'hamsi' | 'karides' | 'midye' | 'somon' | 'levrek' | 'uskumru' | 'bottarga' | 'lakerda' | 'yılan balığı' | 'çipura' | 'alabalık';
   image: string;
-  shortDescription: string;
+  shortDescription?: string;
   description: string;
   features: string[];
   processInfo: string;

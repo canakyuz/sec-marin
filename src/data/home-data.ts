@@ -1,4 +1,4 @@
-import type { Product } from '../types/product'
+import type { Product } from '@/types/product'
 
 export const featuredProducts: Product[] = [
   {
@@ -7,6 +7,7 @@ export const featuredProducts: Product[] = [
     category: 'füme',
     image: '/placeholder.svg',
     description: 'Geleneksel yöntemlerle hazırlanan, lezzetli ve sağlıklı somon füme.',
+    shortDescription: 'Klasik lezzet, mükemmel sunum', // Eklendi
     features: [
       'Özel meşe talaşı ile tütsüleme',
       'El yapımı üretim',
@@ -21,6 +22,7 @@ export const featuredProducts: Product[] = [
     category: 'marine',
     image: '/placeholder.svg',
     description: 'Füme ahtapotun kendine has aroması, marine sosuyla birleştiğinde eşsiz bir tat sunar.',
+    shortDescription: 'Yumuşak ve lezzetli marine ahtapot', // Eklendi
     features: [
       'Özel marine sosu',
       'Geleneksel tarifler',
@@ -35,6 +37,7 @@ export const featuredProducts: Product[] = [
     category: 'füme',
     image: '/placeholder.svg',
     description: 'Taze levreğin enfes dumanlı aroması ile buluşması.',
+    shortDescription: 'Zarif lezzet, füme ustalığı', // Eklendi
     features: [
       'Özel füme tekniği',
       'Seçkin levrek kullanımı',
@@ -44,4 +47,3 @@ export const featuredProducts: Product[] = [
     icon: 'wavy'
   }
 ]
-
