@@ -1,24 +1,16 @@
-"use client";
-
-import { ArrowLeft, ChefHat, Utensils } from 'lucide-react'
-import Image from 'next/image'
-import Link from 'next/link'
-import { notFound } from 'next/navigation'
-import React from 'react';
-import { Card } from "@/components/ui/card"
-import { allProducts } from '@/data/products-data'
-import { useContent } from '@/app/hooks/useContent'
-import { DecorativeLayout } from '@/app/components/DecorativeLayout'
-import ProductTabs from '@/components/ProdcutTabs'
+import { ArrowLeft } from 'lucide-react';
+import Link from 'next/link';
+import { notFound } from 'next/navigation';
+import { DecorativeLayout } from '@/app/components/DecorativeLayout';
+import { allProducts } from '@/data/products-data';
+import { ProductDetails, RecipeDisplay } from '../../components/ClientComponents';
 
 export default function ProductPage({ params }: { params: { id: string } }) {
-  const id = params.id;
-  const product = allProducts.find(p => p.id === parseInt(id));
+  const product = allProducts.find(p => p.id === parseInt(params.id));
+
   if (!product) {
-    notFound()
+    notFound();
   }
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const content = useContent()
 
   const nutritionData = {
     per100g: {
@@ -50,14 +42,14 @@ export default function ProductPage({ params }: { params: { id: string } }) {
       protein: 15.79,
       salt: 0.46
     }
-  }
+  };
 
   const servingSuggestions = [
     'İnce dilimlenmiş olarak kahvaltılarda',
     'Salatalarda',
     'Sandviçlerde',
     'Başlangıç tabağı olarak'
-  ]
+  ];
 
   const recipes = [
     {
@@ -78,7 +70,7 @@ export default function ProductPage({ params }: { params: { id: string } }) {
         'Zeytinyağı ve limon sosu ile servis yapın'
       ]
     }
-  ]
+  ];
 
   return (
       <DecorativeLayout>
@@ -93,80 +85,17 @@ export default function ProductPage({ params }: { params: { id: string } }) {
         </div>
 
         <div className="container mx-auto px-4 pb-12 md:pb-16 relative">
-          <div className="bg-white/90 backdrop-blur-sm rounded-xl shadow-sm overflow-hidden">
-            <div className="grid md:grid-cols-2 gap-6 md:gap-8 p-6 md:p-8">
-              <div className="relative aspect-square rounded-lg overflow-hidden bg-gray-100">
-                <Image
-                    src={product.image}
-                    alt={product.name}
-                    fill
-                    className="object-cover"
-                />
-              </div>
-
-              <div>
-                <ProductTabs
-                    product={product}
-                    nutritionData={nutritionData}
-                    servingSuggestions={servingSuggestions}
-                />
-              </div>
-            </div>
-          </div>
+          <ProductDetails
+              product={product}
+              nutritionData={nutritionData}
+              servingSuggestions={servingSuggestions}
+          />
 
           <div className="mt-12 md:mt-16">
             <h2 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8">Tarifler</h2>
-            <div className="grid md:grid-cols-2 gap-6 md:gap-8 items-start">
-              <div className="w-full space-y-6">
-                {recipes.map((recipe, index) => (
-                    <Card key={index} className="p-4 md:p-6 bg-white/90 backdrop-blur-sm relative overflow-hidden h-full">
-                      <h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4 flex items-center">
-                        <ChefHat className="mr-2 h-6 w-6 text-primary" />
-                        {recipe.title}
-                      </h3>
-                      <p className="text-gray-600 mb-4 md:mb-6 text-sm md:text-base">{recipe.description}</p>
-
-                      <div className="space-y-4 md:space-y-6">
-                        <div>
-                          <h4 className="font-semibold mb-2 text-sm md:text-base">Malzemeler</h4>
-                          <ul className="list-disc list-inside text-gray-600 space-y-1 text-xs md:text-sm">
-                            {recipe.ingredients.map((ingredient, idx) => (
-                                <li key={idx}>{ingredient}</li>
-                            ))}
-                          </ul>
-                        </div>
-
-                        <div>
-                          <h4 className="font-semibold mb-2 text-sm md:text-base">Hazırlanışı</h4>
-                          <ol className="list-decimal list-inside text-gray-600 space-y-1 text-xs md:text-sm">
-                            {recipe.instructions.map((instruction, idx) => (
-                                <li key={idx}>{instruction}</li>
-                            ))}
-                          </ol>
-                        </div>
-                      </div>
-                      <div className="absolute bottom-2 right-2 text-gray-300 opacity-20">
-                        <Utensils className="w-16 h-16" />
-                      </div>
-                    </Card>
-                ))}
-              </div>
-              <div className="hidden md:block w-full h-full">
-                <div className="sticky top-24 w-full h-full">
-                  <div className="relative w-full h-full">
-                    <Image
-                        src="/placeholder.svg"
-                        alt="Tarif Görseli"
-                        fill
-                        className="rounded-lg object-cover"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
+            <RecipeDisplay recipes={recipes} />
           </div>
         </div>
       </DecorativeLayout>
-  )
+  );
 }
-
