@@ -11,8 +11,8 @@ export default function ProductsPage() {
     return (
         <div className="min-h-screen bg-gray-50">
             <PageHeader
-                title={content.about.title}
-                subtitle={content.about.description}
+                title={content.products.title}
+                subtitle={content.products.description}
             />
             <section className="py-16">
                 <div className="container mx-auto px-4">
