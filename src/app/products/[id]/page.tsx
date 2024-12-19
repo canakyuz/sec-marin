@@ -12,6 +12,7 @@ import ProductTabs from '@/components/ProdcutTabs'
 
 export default function ProductPage({ params }: { params: { id: string } }) {
   const product = allProducts.find(p => p.id === parseInt(params.id))
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
   const content = useContent()
 
   if (!product) {
