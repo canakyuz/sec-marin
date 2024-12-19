@@ -5,19 +5,21 @@ import { Card } from "@/components/ui/card";
 import Image from 'next/image';
 import ProductTabs from '../../components/ProdcutTabs';
 import type { Product } from '@/types/product';
+import { ReactElement, JSXElementConstructor, ReactNode, ReactPortal, Key } from 'react';
 
 type RecipeDisplayProps = {
     recipes: any[];
 }
 
-export function RecipeDisplay({ recipes }: RecipeDisplayProps) {
+export function RecipeDisplay({recipes}: RecipeDisplayProps) {
     return (
         <div className="grid md:grid-cols-2 gap-6 md:gap-8 items-start">
             <div className="w-full space-y-6">
                 {recipes.map((recipe, index) => (
-                    <Card key={index} className="p-4 md:p-6 bg-white/90 backdrop-blur-sm relative overflow-hidden h-full">
+                    <Card key={index}
+                          className="p-4 md:p-6 bg-white/90 backdrop-blur-sm relative overflow-hidden h-full">
                         <h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4 flex items-center">
-                            <ChefHat className="mr-2 h-6 w-6 text-primary" />
+                            <ChefHat className="mr-2 h-6 w-6 text-primary"/>
                             {recipe.title}
                         </h3>
                         <p className="text-gray-600 mb-4 md:mb-6 text-sm md:text-base">{recipe.description}</p>
@@ -26,7 +28,7 @@ export function RecipeDisplay({ recipes }: RecipeDisplayProps) {
                             <div>
                                 <h4 className="font-semibold mb-2 text-sm md:text-base">Malzemeler</h4>
                                 <ul className="list-disc list-inside text-gray-600 space-y-1 text-xs md:text-sm">
-                                    {recipe.ingredients.map((ingredient, idx) => (
+                                    {recipe.ingredients.map((ingredient: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | null | undefined, idx: Key | null | undefined) => (
                                         <li key={idx}>{ingredient}</li>
                                     ))}
                                 </ul>
@@ -35,7 +37,7 @@ export function RecipeDisplay({ recipes }: RecipeDisplayProps) {
                             <div>
                                 <h4 className="font-semibold mb-2 text-sm md:text-base">Hazırlanışı</h4>
                                 <ol className="list-decimal list-inside text-gray-600 space-y-1 text-xs md:text-sm">
-                                    {recipe.instructions.map((instruction, idx) => (
+                                    {recipe.instructions.map((instruction: string | number | bigint | boolean | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement<unknown, string | JSXElementConstructor<any>> | Iterable<ReactNode> | null | undefined> | null | undefined, idx: Key | null | undefined) => (
                                         <li key={idx}>{instruction}</li>
                                     ))}
                                 </ol>
