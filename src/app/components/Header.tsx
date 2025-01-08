@@ -53,15 +53,12 @@ export default function Header() {
       <div className="container mx-auto py-4 md:px-0 px-4 flex justify-between items-center">
         <Link href="/" className="flex items-center gap-2 md:gap-4 overflow-hidden">
           <Image 
-            src="/placeholder.svg?height=50&width=50"
+            src="/logo-text.png"
             alt="Sec Marin Logo" 
-            width={40}
+            width={120}
             height={40}
-            className="shrink-0 md:w-[50px] md:h-[50px]" 
+            className="shrink-0 md:w-[120px] md:h-[60px]"
           />
-          <span className={`text-sm md:text-lg font-semibold truncate ${(isHomePage && !isScrolled) ? 'text-white' : 'text-gray-800'}`}>
-            {content?.common?.siteName}
-          </span>
         </Link>
         <nav className="hidden md:flex items-center gap-8"> 
           <ul className="flex space-x-8">

@@ -3,7 +3,7 @@
 import { ArrowLeft } from 'lucide-react';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
-import { DecorativeLayout } from '@/app/components/DecorativeLayout';
+import { DecorativeBackground } from '@/app/components/DecorativeBackground';
 import { allProducts } from '@/data/products-data';
 import { ProductDetails, RecipeDisplay } from '../../components/ClientComponents';
 import type { Recipe } from '@/types/product';
@@ -84,7 +84,7 @@ export default function ProductPage({ params }: PageProps) {
   ];
 
   return (
-      <DecorativeLayout>
+      <DecorativeBackground>
         <div className="container mx-auto px-5 py-6 relative">
           <Link
               href="/products"
@@ -107,6 +107,6 @@ export default function ProductPage({ params }: PageProps) {
             <RecipeDisplay recipes={recipes} />
           </div>
         </div>
-      </DecorativeLayout>
+      </DecorativeBackground>
   );
 }

@@ -2,19 +2,19 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { Key, ReactElement, ReactNode, ReactPortal, useEffect} from 'react'
+import { Key, ReactElement, ReactNode, ReactPortal, useEffect, useRef } from 'react'
 import {gsap} from 'gsap'
 import {ScrollTrigger} from 'gsap/ScrollTrigger'
 import {featuredProducts} from '@/data/home-data'
 import {useContent} from './hooks/useContent'
-import {DecorativeLayout} from './components/DecorativeLayout'
+import {DecorativeBackground} from './components/DecorativeBackground'
 import ProductCard from './components/product/ProductCard'
-import {AnimatedWaves} from './components/AnimatedWaves'
 
 gsap.registerPlugin(ScrollTrigger)
 
 export default function HomePage() {
   const content = useContent()
+  const videoRef = useRef<HTMLVideoElement>(null)
 
   useEffect(() => {
     gsap.from('.hero-content', {
@@ -37,6 +37,11 @@ export default function HomePage() {
         start: 'top bottom',
       },
     })
+
+    // Autoplay video when component mounts
+    if (videoRef.current) {
+      videoRef.current.play().catch(error => console.log("Video autoplay was prevented:", error))
+    }
   }, [])
 
   if (!content || !content.home) {
@@ -46,7 +51,19 @@ export default function HomePage() {
   return (
       <main>
         {/* Hero section */}
-        <div className="hero-section relative h-screen overflow-hidden bg-gradient-to-r from-sky-700 to-blue-900">
+        <div className="hero-section relative h-screen overflow-hidden z-10">
+          <video
+              ref={videoRef}
+              className="absolute top-0 left-0 w-full h-full object-cover"
+              autoPlay
+              muted
+              loop
+              playsInline
+              poster="/video-poster.jpg"
+          >
+            <source src="/sardines.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
           <div className="absolute inset-0 bg-black opacity-50"></div>
           <div className="container mx-auto px-4 h-full flex items-center justify-center relative z-10">
             <div className="text-center text-white">
@@ -56,8 +73,7 @@ export default function HomePage() {
               <p className="text-xl md:text-2xl mb-8 animate-fade-in-up animation-delay-300">
                 {content.home.hero.description}
               </p>
-              <div
-                  className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-4 animate-fade-in-up animation-delay-600">
+              <div className="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-4 animate-fade-in-up animation-delay-600">
                 <Link href="/products"
                       className="bg-sky-500 hover:bg-sky-600 text-white font-bold py-3 px-6 rounded-full transition duration-300 ease-in-out transform hover:scale-105">
                   {content.home.hero.cta.products}
@@ -74,13 +90,8 @@ export default function HomePage() {
               <div className="w-full h-1/3 bg-white absolute top-0 animate-scroll-line"></div>
             </div>
           </div>
-          <div className="absolute bottom-0 left-0 right-0">
-            <AnimatedWaves/>
-          </div>
         </div>
-
-        {/* Rest of the content */}
-        <DecorativeLayout>
+        <div>
           {/* Featured Products Section */}
           <section className="featured-products py-16 md:py-24 bg-gray-50">
             <div className="container mx-auto px-4">
@@ -114,8 +125,7 @@ export default function HomePage() {
                           className="w-full h-full object-cover"
                       />
                     </div>
-                    <div
-                        className="absolute -bottom-4 -right-4 md:-bottom-6 md:-right-6 w-24 h-24 md:w-32 md:h-32 bg-[#A5C5E7] rounded-2xl"/>
+                    <div className="absolute -bottom-4 -right-4 md:-bottom-6 md:-right-6 w-24 h-24 md:w-32 md:h-32 bg-[#A5C5E7] rounded-2xl"/>
                   </div>
                 </div>
 
@@ -147,16 +157,16 @@ export default function HomePage() {
                   title: string | number | bigint | boolean | ReactElement | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement | Iterable<ReactNode> | null | undefined> | null | undefined;
                   description: string | number | bigint | boolean | ReactElement | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement | Iterable<ReactNode> | null | undefined> | null | undefined
                 }, index: Key | null | undefined) => (
-                <div key={index} className="bg-white rounded-xl shadow-lg p-8 text-center transition-all duration-300 hover:shadow-xl">
-                  <h3 className="text-xl font-semibold mb-4 text-slate-700">{item.title}</h3>
-                  <p className="text-gray-600 text-lg">{item.description}</p>
-                </div>
-              ))}
+                    <div key={index} className="bg-white rounded-xl shadow-lg p-8 text-center transition-all duration-300 hover:shadow-xl">
+                      <h3 className="text-xl font-semibold mb-4 text-slate-700">{item.title}</h3>
+                      <p className="text-gray-600 text-lg">{item.description}</p>
+                    </div>
+                ))}
+              </div>
             </div>
-          </div>
-        </section>
-      </DecorativeLayout>
-    </main>
+          </section>
+        </div>
+      </main>
   )
 }
 
