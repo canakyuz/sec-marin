@@ -80,7 +80,7 @@ export function ProductDetails({
                                    servingSuggestions
                                }: {
     product: Product;
-    nutritionData: any;
+    nutritionData: never;
     servingSuggestions: string[];
 }) {
     return (

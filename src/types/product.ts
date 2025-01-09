@@ -4,7 +4,7 @@ export interface Product {
   category: 'fume' | 'marine';
   subcategory: string;
   image: string;
-  packedImage?: string;
+  packedImage: string;
   icon: string;
   shortDescription: string;
   description: string;
