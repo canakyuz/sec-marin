@@ -5,9 +5,8 @@ import Link from 'next/link'
 import { Key, ReactElement, ReactNode, ReactPortal, useEffect, useRef } from 'react'
 import {gsap} from 'gsap'
 import {ScrollTrigger} from 'gsap/ScrollTrigger'
-import {featuredProducts} from '@/data/home-data'
+import {featuredProducts} from '../data/products-data'
 import {useContent} from './hooks/useContent'
-import {DecorativeBackground} from './components/DecorativeBackground'
 import ProductCard from './components/product/ProductCard'
 
 gsap.registerPlugin(ScrollTrigger)
@@ -124,7 +123,7 @@ export default function HomePage() {
                           className="w-full h-full object-cover"
                       />
                     </div>
-                    <div className="absolute -bottom-4 -right-4 md:-bottom-6 md:-right-6 w-24 h-24 md:w-32 md:h-32 bg-[#A5C5E7] rounded-2xl"/>
+                    <div className="absolute -bottom-4 -right-4 md:-bottom-6 md:-right-6 w-24 h-24 md:w-32 md:h-32 bg-[#A5C5E7] rounded-2xl opacity-90 backdrop-blur-3xl brightness-90"/>
                   </div>
                 </div>
 

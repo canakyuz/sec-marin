@@ -1,34 +1,20 @@
 import Image from 'next/image'
 import Link from 'next/link'
 import { motion } from 'framer-motion'
-import { Product } from '@/data'
+import { Product } from '@/types/product'
 import { WavePattern } from '../Decorations'
 
 interface ProductCardProps {
   product: Product
-  lang: 'tr' | 'en'
 }
 
-const getIconComponent = (iconType: Product['icon']) => {
-  switch (iconType) {
-    case 'minimalist':
-      return '/icons/minimalist.svg'
-    case 'wavy':
-      return '/icons/wavy.svg'
-    case 'octopus':
-      return '/icons/octopus.svg'
-    default:
-      return '/icons/minimalist.svg'
-  }
-}
-
-export const ProductCard: React.FC<ProductCardProps> = ({ product, lang }) => {
+export default function ProductCard({ product }: ProductCardProps) {
   return (
       <motion.div
           whileHover={{ y: -5 }}
           transition={{ duration: 0.3 }}
       >
-        <Link href={`/${lang}/products/${product.id}`}>
+        <Link href={`/products/${product.id}`}>
           <div className="product-card group bg-white rounded-2xl overflow-hidden transition-all hover:shadow-xl relative">
             <div className="relative aspect-square">
               <Image
@@ -45,14 +31,6 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, lang }) => {
               <div className="absolute bottom-0 left-0 right-0 p-6">
                 <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-500">
                   <div className="flex items-center gap-4 mb-3">
-                    <div className="w-10 h-10 text-white">
-                      <Image
-                          src={getIconComponent(product.icon)}
-                          alt={`${product.name} icon`}
-                          width={40}
-                          height={40}
-                      />
-                    </div>
                     <h2 className="text-lg md:text-xl font-semibold text-white">{product.name}</h2>
                   </div>
                   <p className="text-sm md:text-base text-white/90 opacity-0 group-hover:opacity-100 transition-opacity duration-500 line-clamp-2">
@@ -66,6 +44,4 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, lang }) => {
       </motion.div>
   )
 }
-
-export default ProductCard
 

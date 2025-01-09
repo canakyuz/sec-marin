@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion'
 import Image from 'next/image'
 import { useContent } from '@/app/hooks/useContent'
-import { PageHeader } from '../components/PageHeader'
+import PageHeader from '../components/PageHeader'
 import Section from '../components/Section'
 import { aboutData } from '@/data/about-data'
 import { Parallax } from '../components/Parallax'
@@ -28,9 +28,11 @@ export default function AboutPage() {
 
   return (
     <div className="about-page">
-      <PageHeader 
+      <PageHeader
         title={content.about.title}
-        subtitle={content.about.description}
+        description={content.about.description}
+        mediaType="video"
+        mediaSrc="sardines.mp4"
       />
 
       <Section className="relative overflow-hidden">

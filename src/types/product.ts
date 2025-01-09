@@ -1,29 +1,61 @@
-export type Recipe = {
+export interface Product {
+  id: number;
+  name: string;
+  category: 'fume' | 'marine';
+  subcategory: string;
+  image: string;
+  packedImage?: string;
+  icon: string;
+  shortDescription: string;
+  description: string;
+  features: string[];
+  processInfo: string;
+  servingSuggestions: string[];
+  nutritionInfo?: NutritionInfo;
+  recipes?: Recipe[];
+}
+
+
+export interface NutritionInfo {
+  per100g: {
+    energy: {
+      kj: number;
+      kcal: number;
+    };
+    fat: {
+      total: number;
+      saturated: number;
+    };
+    carbs: {
+      total: number;
+      sugars: number;
+    };
+    protein: number;
+    salt: number;
+  };
+  perServing: {
+    size: number;  // in grams
+    energy: {
+      kj: number;
+      kcal: number;
+    };
+    fat: {
+      total: number;
+      saturated: number;
+    };
+    carbs: {
+      total: number;
+      sugars: number;
+    };
+    protein: number;
+    salt: number;
+  };
+}
+
+export interface Recipe {
   title: string;
   description: string;
   ingredients: string[];
   instructions: string[];
-}
-
-export type Product = {
-  id: number;
-  name: string;
-  category: 'füme' | 'marine';
-  subcategory?: 'ahtapot' | 'hamsi' | 'karides' | 'midye' | 'somon' | 'levrek' | 'uskumru' | 'bottarga' | 'lakerda' | 'yılan balığı' | 'çipura' | 'alabalık' | 'torik' | 'karışık';
-  image: string;
-  shortDescription?: string;
-  description: string;
-  packedImage: string;
-  features: string[];
-  processInfo: string;
-  icon: string;
-  recipes?: Recipe[];
-  nutritionInfo?: {
-    protein: string;
-    fat: string;
-    carbs: string;
-    calories: string;
-  };
-  servingSuggestions?: string[];
 }
 

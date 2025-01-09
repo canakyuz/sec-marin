@@ -88,7 +88,7 @@ export function ProductDetails({
             <div className="grid md:grid-cols-2 gap-6 md:gap-8 p-6 md:p-8">
                 <div className="relative aspect-square rounded-lg overflow-hidden bg-gray-100">
                     <Image
-                        src={product.image}
+                        src={product.packedImage}
                         alt={product.name}
                         fill
                         className="object-cover"

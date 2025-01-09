@@ -10,7 +10,7 @@ interface PageHeaderProps {
 
 export default function PageHeader({ title, subtitle }: PageHeaderProps) {
     return (
-        <div className="relative py-16 md:py-24 bg-gradient-to-r from-blue-900 via-blue-800 to-blue-700 overflow-hidden">
+        <div className="relative py-16 md:py-48 bg-gradient-to-r from-blue-900 via-blue-800 to-blue-700 overflow-hidden">
             {/* Animated Waves Background */}
             <WavePattern />
 
