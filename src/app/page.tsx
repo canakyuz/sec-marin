@@ -59,7 +59,6 @@ export default function HomePage() {
               muted
               loop
               playsInline
-              poster="/video-poster.jpg"
           >
             <source src="/sardines.mp4" type="video/mp4" />
             Your browser does not support the video tag.

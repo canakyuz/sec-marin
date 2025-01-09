@@ -1,5 +1,5 @@
 export const aboutData = {
-  heroImage: '/placeholder.svg',
+  heroImage: '/LOGOOO.png',
   sections: [
     {
       title: "Biz Kimiz?",

@@ -38,7 +38,7 @@ export const FeaturedProductCard: React.FC<FeaturedProductCardProps> = ({ produc
               {product.description}
             </p>
             <Button asChild variant="secondary" size="sm">
-              <Link href={`/products/${product.id}`}>Ürünü İncele</Link>
+              <Link href={`/src/app/products/${product.id}`}>Ürünü İncele</Link>
             </Button>
           </div>
         </div>

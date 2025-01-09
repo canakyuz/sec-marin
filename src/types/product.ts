@@ -9,13 +9,14 @@ export type Product = {
   id: number;
   name: string;
   category: 'füme' | 'marine';
-  subcategory?: 'ahtapot' | 'hamsi' | 'karides' | 'midye' | 'somon' | 'levrek' | 'uskumru' | 'bottarga' | 'lakerda' | 'yılan balığı' | 'çipura' | 'alabalık';
+  subcategory?: 'ahtapot' | 'hamsi' | 'karides' | 'midye' | 'somon' | 'levrek' | 'uskumru' | 'bottarga' | 'lakerda' | 'yılan balığı' | 'çipura' | 'alabalık' | 'torik' | 'karışık';
   image: string;
   shortDescription?: string;
   description: string;
+  packedImage: string;
   features: string[];
   processInfo: string;
-  icon: 'minimalist' | 'wavy' | 'octopus';
+  icon: string;
   recipes?: Recipe[];
   nutritionInfo?: {
     protein: string;
