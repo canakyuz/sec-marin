@@ -3,42 +3,12 @@
 import { useState } from 'react'
 import { Badge } from "@/components/ui/badge"
 import { cn } from "@/lib/utils"
-import { Product } from '@/types/product'
+import type { Product, NutritionInfo } from '@/types/product'
 
 interface ProductTabsProps {
-    product: Product
-    nutritionData: {
-        per100g: {
-            energy: { kj: number; kcal: number };
-            fat: {
-                total: number;
-                saturated: number;
-                unsaturated: number;
-            };
-            carbs: {
-                total: number;
-                sugars: number;
-            };
-            protein: number;
-            salt: number;
-        };
-        perServing: {
-            size: number;
-            energy: { kj: number; kcal: number };
-            fat: {
-                total: number;
-                saturated: number;
-                unsaturated: number;
-            };
-            carbs: {
-                total: number;
-                sugars: number;
-            };
-            protein: number;
-            salt: number;
-        };
-    }
-    servingSuggestions: string[]
+    product: Product;
+    nutritionData: NutritionInfo;
+    servingSuggestions: string[];
 }
 
 export default function ProductTabs({ product, nutritionData, servingSuggestions }: ProductTabsProps) {
@@ -48,7 +18,7 @@ export default function ProductTabs({ product, nutritionData, servingSuggestions
         <div className="space-y-4 md:space-y-6">
             <div>
                 <Badge variant="secondary" className="mb-2 md:mb-3">
-                    {product.category === 'füme' ? 'Füme Ürünler' : 'Marine Ürünler'}
+                    {product.category === 'fume' ? 'Füme Ürünler' : 'Marine Ürünler'}
                 </Badge>
                 <h1 className="text-2xl md:text-3xl font-bold">{product.name}</h1>
                 <p className="text-gray-600 mt-2 text-sm md:text-base">{product.description}</p>
@@ -119,6 +89,11 @@ export default function ProductTabs({ product, nutritionData, servingSuggestions
                                 <td className="py-2 pl-4">- Doymuş Yağ (g)</td>
                                 <td className="text-right">{nutritionData.per100g.fat.saturated}</td>
                                 <td className="text-right">{nutritionData.perServing.fat.saturated}</td>
+                            </tr>
+                            <tr>
+                                <td className="py-2 pl-4">- Doymamış Yağ (g)</td>
+                                <td className="text-right">{nutritionData.per100g.fat.unsaturated}</td>
+                                <td className="text-right">{nutritionData.perServing.fat.unsaturated}</td>
                             </tr>
                             <tr>
                                 <td className="py-2">Karbonhidrat (g)</td>

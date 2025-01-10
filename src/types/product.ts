@@ -25,6 +25,7 @@ export interface NutritionInfo {
     fat: {
       total: number;
       saturated: number;
+      unsaturated: number;
     };
     carbs: {
       total: number;
@@ -42,6 +43,7 @@ export interface NutritionInfo {
     fat: {
       total: number;
       saturated: number;
+      unsaturated: number;
     };
     carbs: {
       total: number;
@@ -58,4 +60,3 @@ export interface Recipe {
   ingredients: string[];
   instructions: string[];
 }
-

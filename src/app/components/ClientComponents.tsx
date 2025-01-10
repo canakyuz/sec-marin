@@ -4,11 +4,11 @@ import { ChefHat, Utensils } from 'lucide-react';
 import { Card } from "@/components/ui/card";
 import Image from 'next/image';
 import ProductTabs from '../../components/ProdcutTabs';
-import type {NutritionInfo, Product} from '@/types/product';
-import { ReactElement, ReactNode, ReactPortal, Key } from 'react';
+import type { NutritionInfo, Product } from '@/types/product';
+import type { Recipe } from '@/types/product';
 
 type RecipeDisplayProps = {
-    recipes: any[];
+    recipes: Recipe[];
 }
 
 export function RecipeDisplay({recipes}: RecipeDisplayProps) {
@@ -34,7 +34,7 @@ export function RecipeDisplay({recipes}: RecipeDisplayProps) {
                                     Malzemeler
                                 </h4>
                                 <ul className="list-disc list-inside text-gray-600 space-y-1 text-xs md:text-sm">
-                                    {recipe.ingredients.map((ingredient: string | number | bigint | boolean | ReactElement | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement | Iterable<ReactNode> | null | undefined> | null | undefined, idx: Key | null | undefined) => (
+                                    {recipe.ingredients.map((ingredient, idx) => (
                                         <li key={idx}>{ingredient}</li>
                                     ))}
                                 </ul>
@@ -45,7 +45,7 @@ export function RecipeDisplay({recipes}: RecipeDisplayProps) {
                                     Hazırlanışı
                                 </h4>
                                 <ol className="list-decimal list-inside text-gray-600 space-y-1 text-xs md:text-sm">
-                                    {recipe.instructions.map((instruction: string | number | bigint | boolean | ReactElement | Iterable<ReactNode> | ReactPortal | Promise<string | number | bigint | boolean | ReactPortal | ReactElement | Iterable<ReactNode> | null | undefined> | null | undefined, idx: Key | null | undefined) => (
+                                    {recipe.instructions.map((instruction, idx) => (
                                         <li key={idx}>{instruction}</li>
                                     ))}
                                 </ol>
@@ -73,7 +73,6 @@ export function RecipeDisplay({recipes}: RecipeDisplayProps) {
         </div>
     );
 }
-
 export function ProductDetails({
                                    product,
                                    nutritionData,
@@ -83,7 +82,6 @@ export function ProductDetails({
     nutritionData: NutritionInfo;
     servingSuggestions: string[];
 }) {
-
     return (
         <div className="bg-white/90 backdrop-blur-sm rounded-xl shadow-sm overflow-hidden">
             <div className="grid md:grid-cols-2 gap-6 md:gap-8 p-6 md:p-8">
