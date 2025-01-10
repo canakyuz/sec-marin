@@ -3,7 +3,7 @@ import type { Product, NutritionInfo } from '@/types/product'
 const defaultNutritionInfo: NutritionInfo = {
   per100g: {
     energy: { kj: 0, kcal: 0 },
-    fat: { total: 0, saturated: 0 },
+    fat: { total: 0, saturated: 0, unsaturated: 0 },
     carbs: { total: 0, sugars: 0 },
     protein: 0,
     salt: 0
@@ -11,7 +11,7 @@ const defaultNutritionInfo: NutritionInfo = {
   perServing: {
     size: 55,
     energy: { kj: 0, kcal: 0 },
-    fat: { total: 0, saturated: 0 },
+    fat: { total: 0, saturated: 0, unsaturated: 0 },
     carbs: { total: 0, sugars: 0 },
     protein: 0,
     salt: 0
