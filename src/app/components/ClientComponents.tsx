@@ -4,7 +4,7 @@ import { ChefHat, Utensils } from 'lucide-react';
 import { Card } from "@/components/ui/card";
 import Image from 'next/image';
 import ProductTabs from '../../components/ProdcutTabs';
-import type { Product } from '@/types/product';
+import type {NutritionInfo, Product} from '@/types/product';
 import { ReactElement, ReactNode, ReactPortal, Key } from 'react';
 
 type RecipeDisplayProps = {
@@ -80,9 +80,10 @@ export function ProductDetails({
                                    servingSuggestions
                                }: {
     product: Product;
-    nutritionData: string[];
+    nutritionData: NutritionInfo;
     servingSuggestions: string[];
 }) {
+
     return (
         <div className="bg-white/90 backdrop-blur-sm rounded-xl shadow-sm overflow-hidden">
             <div className="grid md:grid-cols-2 gap-6 md:gap-8 p-6 md:p-8">
